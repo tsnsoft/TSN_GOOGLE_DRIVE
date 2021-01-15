@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>kz.proffix4.googledrive</groupId>
+    <artifactId>TSN_GOOGLE_DRIVE</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.http.version>1.23.0</project.http.version>
+        <project.oauth.version>1.23.0</project.oauth.version>
+    </properties>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+    
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+          <id>MyGet</id>
+          <url>${repo.url}</url>
+        </repository>
+    </repositories>
+    
+    <dependencies>
+        <dependency>
+          <groupId>com.google.apis</groupId>
+          <artifactId>google-api-services-drive</artifactId>
+          <version>v3-rev86-1.23.0</version>
+        </dependency>
+        <dependency>
+          <groupId>com.google.http-client</groupId>
+          <artifactId>google-http-client</artifactId>
+          <version>${project.http.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.google.oauth-client</groupId>
+          <artifactId>google-oauth-client-jetty</artifactId>
+          <version>${project.oauth.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.google.http-client</groupId>
+          <artifactId>google-http-client-jackson2</artifactId>
+          <version>${project.http.version}</version>
+        </dependency>
+    </dependencies>
+  
+</project>
